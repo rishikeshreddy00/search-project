@@ -1,0 +1,22 @@
+<%- include("partials/header") -%>
+
+<div class="group">
+    <form action="/add/user" method="post">
+        <h1>Add Name And Location</h1><div class="input-group mb-3">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Recipient's username" name="name" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                <div class="input-group-append">
+                  <span class="input-group-text" id="basic-addon2">Add Name</span>
+                </div>
+            </div>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Recipient's Location" name="location" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                <div class="input-group-append">
+                  <span class="input-group-text" id="basic-addon2">Add Location</span>
+                </div>
+            </div>
+            <input type="submit" value="ADD" class="add-submit btn btn-outline-light">
+    </form>
+</div>
+
+<%- include("partials/footer") -%>

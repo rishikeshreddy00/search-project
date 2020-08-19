@@ -1,0 +1,26 @@
+<%- include("partials/header") -%>
+    <div class="group">
+    <form action="/find/user" method="post">
+        <h1>Search for your required document</h1>
+        <div class="input-group mb-3 users">
+            <input type="text" class="form-control" name="searchUser" placeholder="Enter name or Location to search.." aria-label="Recipient's username" aria-describedby="basic-addon2">
+            <div class="input-group-append">
+              <button class="btn btn-outline-secondary" type="submit">search</button>
+            </div>
+          </div>
+    </form>
+  </div>
+  <h3 class="center">All Users</h3>
+  <div class="container">
+    <div class="row">
+      <% users.map(user => { %>
+      <div class="card col-lg-3 col-md-4 col-sm-6 box">
+        <h2><%= user.name %></h2>
+        <div class="card-body">
+          <h5 class="card-title"><span><b>Location:</b></span> <%= user.location %></h5>
+        </div>
+      </div>
+     <% }) %>
+      </div>
+    </div>
+<%- include("partials/footer") -%>
